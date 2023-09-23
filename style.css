@@ -19,6 +19,7 @@ body {
 }
 .main-container{
     width:85vw;
+    background-color: rgb(237, 253, 237) ;
 }
 .top-bar {
     position: fixed;
@@ -27,17 +28,20 @@ body {
     display: flex;
     justify-content: space-between;
     width: 82.5vw;
-    padding: 10px;
+    padding-top: 20px;
     font-size: 12px;
     background-color:#ffffff;
   }
-  .main-content {
-    padding-top: 100px;
-    padding-left: 0vw;  
+.main-content {
+    margin-top: 10vh !important;
+    margin-left: 25% !important;  
+    padding: 20px;
+    
   }
   .top-bar-right-content {
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
   }
  .nav-container ul {
     list-style-type: none;
@@ -66,10 +70,9 @@ body {
     padding: 20px;
 }
 .cardbox {
-    position: absolute;
-    top: 45px;
-    right: 200px;
     display: flex;
+    padding-left: 20%;
+    padding-top: 20vh;
 } 
 .card {
     display: flex;
@@ -79,7 +82,8 @@ body {
     padding: 20px;  
     margin-right: 0px;
     text-align: center; 
-    padding-right: 8%;   
+    padding-right: 8%; 
+    justify-content: space-between;  
 } 
 .title{
     padding-left: 7px;
@@ -95,11 +99,13 @@ body {
 .log-out{
     display: flex;       
     justify-content: end;  
-    padding-top: 5px;
+    padding-top: 5%;
     padding-bottom: 5px; 
 }
 .right-icons{
-    padding-left: 30px;
+    padding-left: 15px;
+    padding-top: 2px;
+    align-items: center;
     
 }
 .circle {
@@ -107,14 +113,65 @@ body {
     height: 30px;
     border-radius: 50%;
     overflow: hidden;
+   
   }
   .circle img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
   }
-  
-
+  .side-bar-user{
+    display:flex;
+    padding-left: 15px;
+    justify-content: space-between;
+    
+  }
+  .side-bar-detail{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+  .calendar-icon{
+    padding-top: 2px;
+    padding-left: 7px;
+  }
+  .flex{
+    display: flex;
+  }
+  .header{
+    padding-top: 10px   ;
+  }
+  .header-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 300px;
+    padding:8px;
+    border-radius: 5px;
+    background-color: rgb(200, 202, 200);
+    font-weight: bold;
+    color: #000; 
+  }
+  .active-bar{
+    display:flex;
+    border-radius: 100px;
+    color: #faf2f2;
+    background-color:#347ed2;
+  }
+  .title1{
+    color:#347ed2;
+    font-size:12px;
+    font-weight: bold;
+  }
+  .card-body{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-content
+  {
+    display: flex;
+    flex-direction: column;
+  }
 /* Add responsive styles for smaller screens */
 @media (max-width: 768px) {
     .container {
