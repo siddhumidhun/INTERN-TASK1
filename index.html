@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NAMMA OORU TAXI</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha384-oBqDVmMzT5c5zCf5KP5Pnb8sNg6w6B4z7IOvxCV5d6E+4eP3U5Pto5ZaaFOpDgpiD"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
     <div class="container">
@@ -165,8 +159,8 @@
       <div class="main-container">
         <div class="top-bar">
           <div class="header">Vehicle Management/<strong>All Vehicles</strong></div>
-          <div class="top-bar-right-content">
-            <div class="flex">
+            <div class="top-bar-right-content">
+              <div class="flex">
               Dec 1 2022|10 am 
               <span class="calendar-icon"><ion-icon name="calendar-outline"></ion-icon></span>
             </div>
@@ -178,39 +172,41 @@
             </div>
             <div class="side-bar-user">
               <div class="side-bar-detail">
-            <div>Ezio auditore</div>
-            <div class="right-align">
-              Admin
-            </div>
-            </div>
-            <div class="circle">
-              <img src="img/ss.jpg" alt="Your Image" />
-            </div>
-          </div>
-        </div>
-      </div>
-        <main class="main-content">
+                <div><strong>Ezio auditore</strong></div>
+                  <div class="right-align">
+                   Admin
+                  </div>
+                </div>
+                <div class="circle">
+                  <img src="img/ss.jpg" alt="Your Image" />
+                </div>
+              </div>
+           </div>
+         </div>
+         <main class="main-content">
           <div class="tab-container">
             <button class="tab-button active">All vehicles</button>
             <button class="tab-button"> Inspection pending</button>
             <button class="tab-button">Manage approval</button>
             <button class="tab-button">Documents expiry</button>
-        </div>
+          </div>
           <div class="cardbox">
             <div class="card card-blue">
               <div class="card-body">
                 <div class="left-content">
-                  <div><img src="img/blue1.jpg" /></div>
+                  <div><img src="img/blue1.jpg" />
+                  </div>
                   <div class="card-text">
-                    <span class="card-count">500</span>
-                  <span class="card-inner-text">Total vehicles</span>
-                </div>
+                      <span class="card-count">500</span>
+                      <span class="card-inner-text">Total vehicles</span>
+                  </div>
                 </div>
                 <div class="right-content">
-                  <div><img src="img/blue2.jpg" /></div>
+                  <div><img src="img/blue2.jpg" />
+                  </div>
                   <div class="right-bottom-icon"><img src="img/blue3.jpg" /></div>
-                </div>
-              </div>
+                  </div>
+               </div>
             </div>
             <div class="card card-green">
               <div class="card-body">
@@ -296,46 +292,46 @@
               </div>
             </div>
             <div class="child-div">
-                <select class="small-font">
+                <select class="status-select">
                   <option value="Inspection Status">Inspection Status</option>
                 </select>
             </div>
             <div class="child-div">
-                <select class="small-font">
+                <select class="status-select">
                     <option value="Vehicle State">Vehicle State</option>
                 </select>
             </div>
             <div class="child-div">
-                <select class="small-font">
+                <select class="status-select">
                     <option value="Date Range">Date Range</option>
                 </select>
             </div>
             <div class="child-div">
-                <select class="small-font">
+                <select class="status-select">
                     <option value="Type">Type</option>
                 </select>
             </div>
             <div class="child-div">
-                <select class="small-font">
+                <select class="status-select">
                     <option value="Engaged">Engaged</option>
                 </select>
             </div>
             <div class="space-div"></div>
-            <div class="child-div">
-                <select class="small-font">
+              <div class="child-div">
+                <select class="page-count status-select">
                     <option value="25">25</option>
                 </select>
-            </div>
-            <div class="child-div icons-div">
+              </div>
+              <div class="child-div icons-div">
                 <span class="icon"><img src="img/side1.jpg" alt="Side 1 Icon"></span>
                 <span class="icon"><img src="img/side2.jpg" alt="Side 2 Icon"></span>
                 <span class="icon"><img src="img/side3.jpg" alt="Side 3 Icon"></span>
                 <span class="icon"><img src="img/side4.jpg" alt="Side 4 Icon"></span>
-            </div>
-        </div>
-        <div class="parent-table">
+             </div>
+             </div>
+          <div class="parent-table">
           <div class="table">
-              <table>
+              <table class="table-value">
                   <thead>
                       <tr>
                           <th>SI.NO</th>
@@ -355,7 +351,6 @@
                       </tr>
                   </thead>
                   <tbody>
-                      <!-- Row 1 -->
                       <tr>
                           <td>1</td>
                           <td>TN 01 AB 1234</td>
@@ -369,26 +364,17 @@
                           <td>Yes</td>
                           <td>01 Jan 2023</td>
                           <td>
-                            <select class="select-table">
-                              <option value="Pending">Pending</option>
-                              <option value="Inspected">Inspected</option>
-                              <option value="Client Approved">Client Approved</option>
-                              <option value="Rejected">Rejected</option>
-                              <option value="Incomplete">Incomplete</option>
+                          <select id="mySelect" onchange="passSelectedData(this)">
                           </select>
                           </td>
                           <td>
-                            <select class="select-status">
-                             <option value="Active">Active</option>
-                             <option value="Inactive">Inactive</option>
-                             <option value="Idle">Idle</option>
-                             <option value="Temporarily Blocked">Temporarily Blocked</option>
-                             <option value="Permanently Blocked">Permanently Blocked</option>
-                           </select>
+                           <select id="select-status" onchange="passSelectedData(this)">
+                            </select>
                          </td>
-                        <td><button>Edit</button></td>
+                        <td><img src="img/table3.jpg"alt=""width="24"height="20">
+                          <img src="img/table6.jpg"alt=""width="24"height="20">
+                          <img src="img/table2.jpg"alt=""width="24"height="20"></td>
                       </tr>
-                      <!-- Row 2 (Empty) -->
                       <tr>
                           <td>2</td>
                           <td>TN 01 AB 5678</td>
@@ -402,33 +388,126 @@
                           <td>No</td>
                           <td>01 Jan 2023</td>
                           <td>
-                            <select class="select-table">
-                              <option value="Inspected">Inspected</option>
-                              <option value="Pending">Pending</option>
-                              <option value="Client Approved">Client Approved</option>
-                              <option value="Rejected">Rejected</option>
-                              <option value="Incomplete">Incomplete</option>
-                           </select>
+                           <select id="mySelect1" onchange="passSelectedData(this)">
+                          </select>
                           </td>
                           <td>
-                            <select class="select-status">
-                              <option value="Active">Active</option>
-                              <option value="Inactive">Inactive</option>
-                              <option value="Idle">Idle</option>
-                              <option value="Temporarily Blocked">Temporarily Blocked</option>
-                              <option value="Permanently Blocked">Permanently Blocked</option>
+                            <select id="select-status1" onchange="passSelectedData(this)">
                             </select>
                           </td>
-                          <td><button>Edit</button></td>
+                          <td><img src="img/table1.jpg"alt=""width="24"height="20">
+                            <img src="img/table4.jpg"alt=""width="24"height="20">
+                            <img src="img/table5.jpg"alt=""width="24"height="20"></td>
                        </tr>
                    </tbody>
               </table>
           </div>
       </div>
-        </main>
+    </main>
       </div>
     </div>
-    <script src="INTERN/js/main.js"></script>
+    <script>
+      var data = [
+        { value: 'Pending', text: "Pending",color:"#FF8C00"},
+        { value: 'Inspected', text: "Inspected",color:"#00008B"},
+        { value: 'Client Approved', text: "Client Approved",color:"#006400"},
+        { value: 'Rejected', text: "Rejected",color:"#FF0000"},
+        { value: 'Incomplete', text: "Incomplete",color:"#A52A2A"}
+      ];
+    function renderOptions() {
+        var select = document.getElementById('mySelect'); 
+    for (var i = 0; i < data.length; i++) {
+          var option = document.createElement('option'); 
+          option.value = data[i].value;
+          option.text = data[i].text; 
+          option.style.color = data[i].color; 
+    select.appendChild(option);  
+        }
+      }
+    renderOptions();
+    </script>
+    <script>
+      function passSelectedData(selectElement) {
+        var select = document.getElementById(selectElement.id); 
+        var selectedIndex = select.selectedIndex;
+      
+        if (selectedIndex !== -1) {
+          var selectedOption = select.options[selectedIndex]; 
+          var selectedValue = selectedOption.value; 
+          var selectedColor = selectedOption.style.color; 
+          myFunction(selectedValue, selectedColor,selectElement.id);
+        } else {
+          alert('No option selected.');
+        }
+      }
+      
+      function myFunction(selectedValue, selectedColor,elementId) {
+        var select = document.getElementById(elementId);
+        select.style.color=selectedColor;
+        select.style.borderColor=selectedColor;
+      }
+      </script>
+      
+    <script>
+      var data = [
+        { value: 'Pending', text: "Pending",color:"#FF8C00"},
+        { value: 'Inspected', text: "Inspected",color:"#00008B"},
+        { value: 'Client Approved', text: "Client Approved",color:"#006400"},
+        { value: 'Rejected', text: "Rejected",color:"#FF0000"},
+        { value: 'Incomplete', text: "Incomplete",color:"#A52A2A"}
+      ];
+    function renderOptions() {
+        var select = document.getElementById('mySelect1'); 
+    for (var i = 0; i < data.length; i++) {
+          var option = document.createElement('option'); 
+          option.value = data[i].value;
+          option.text = data[i].text; 
+          option.style.color = data[i].color; 
+    select.appendChild(option);  
+        }
+      }
+    renderOptions();
+    </script>
+    <script>
+      var data = [
+        { value: 'Active', text: "Active",color:"#006400"},
+        { value: 'Inactive', text: "Inactive",color:"#FF0000"},
+        { value: 'Idle', text: "Idle",color:"#FF8C00"},
+        { value: 'Temporarily Blocked', text: "Temporarily Blocked",color:"#A52A2A"},
+        { value: 'Permanently Blocked', text: "Permanently Blocked",color:"#808080"}
+      ];
+    function renderOptions() {
+        var select = document.getElementById('select-status'); 
+    for (var i = 0; i < data.length; i++) {
+          var option = document.createElement('option'); 
+          option.value = data[i].value;
+          option.text = data[i].text; 
+          option.style.color = data[i].color; 
+    select.appendChild(option);  
+        }
+      }
+    renderOptions();
+    </script>
+    <script>
+      var data = [
+        { value: 'Active', text: "Active",color:"#006400"},
+        { value: 'Inactive', text: "Inactive",color:"#FF0000"},
+        { value: 'Idle', text: "Idle",color:"#FF8C00"},
+        { value: 'Temporarily Blocked', text: "Temporarily Blocked",color:"#A52A2A"},
+        { value: 'Permanently Blocked', text: "Permanently Blocked",color:"#808080"}
+      ];
+    function renderOptions() {
+        var select = document.getElementById('select-status1'); 
+    for (var i = 0; i < data.length; i++) {
+          var option = document.createElement('option'); 
+          option.value = data[i].value;
+          option.text = data[i].text; 
+          option.style.color = data[i].color; 
+    select.appendChild(option);  
+        }
+      }
+    renderOptions();
+    </script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
