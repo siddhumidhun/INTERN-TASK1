@@ -15,7 +15,7 @@
           </li>
           <li>
             <span class="log-out">
-              <ion-icon name="log-in-outline"></ion-icon>
+              <img src="img/log.jpg" alt="dashboard" />
             </span>
           </li>
           <li>
@@ -430,7 +430,6 @@
       function passSelectedData(selectElement) {
         var select = document.getElementById(selectElement.id); 
         var selectedIndex = select.selectedIndex;
-      
         if (selectedIndex !== -1) {
           var selectedOption = select.options[selectedIndex]; 
           var selectedValue = selectedOption.value; 
@@ -440,15 +439,13 @@
           alert('No option selected.');
         }
       }
-      
       function myFunction(selectedValue, selectedColor,elementId) {
         var select = document.getElementById(elementId);
         select.style.color=selectedColor;
         select.style.borderColor=selectedColor;
       }
       </script>
-      
-    <script>
+      <script>
       var data = [
         { value: 'Pending', text: "Pending",color:"#FF8C00"},
         { value: 'Inspected', text: "Inspected",color:"#00008B"},
@@ -456,19 +453,19 @@
         { value: 'Rejected', text: "Rejected",color:"#FF0000"},
         { value: 'Incomplete', text: "Incomplete",color:"#A52A2A"}
       ];
-    function renderOptions() {
+      function renderOptions() {
         var select = document.getElementById('mySelect1'); 
-    for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
           var option = document.createElement('option'); 
           option.value = data[i].value;
           option.text = data[i].text; 
           option.style.color = data[i].color; 
-    select.appendChild(option);  
+      select.appendChild(option);  
         }
       }
-    renderOptions();
-    </script>
-    <script>
+      renderOptions();
+      </script>
+      <script>
       var data = [
         { value: 'Active', text: "Active",color:"#006400"},
         { value: 'Inactive', text: "Inactive",color:"#FF0000"},
@@ -476,17 +473,17 @@
         { value: 'Temporarily Blocked', text: "Temporarily Blocked",color:"#A52A2A"},
         { value: 'Permanently Blocked', text: "Permanently Blocked",color:"#808080"}
       ];
-    function renderOptions() {
+      function renderOptions() {
         var select = document.getElementById('select-status'); 
-    for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < data.length; i++) {
           var option = document.createElement('option'); 
           option.value = data[i].value;
           option.text = data[i].text; 
           option.style.color = data[i].color; 
-    select.appendChild(option);  
-        }
+          select.appendChild(option);  
+          }
       }
-    renderOptions();
+      renderOptions();
     </script>
     <script>
       var data = [

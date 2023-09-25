@@ -99,10 +99,10 @@ body {
 }
 .log-out{
     display: flex;       
-    justify-content: end;  
+    justify-content: flex-end;  
     padding-top: 5%;
     padding-bottom: 5px; 
-    margin: 5px 0px;
+    margin-right: -20px;
 }
 .right-icons{
     padding-left: 15px;
@@ -330,9 +330,6 @@ select {
   height: 22px;
   width: 50px;
 }
-
-
-/* Add responsive styles for smaller screens */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
